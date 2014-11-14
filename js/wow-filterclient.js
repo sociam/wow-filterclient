@@ -21,6 +21,15 @@ angular.module('filterclient', ['btford.socket-io'])
         mysocket.addListener("wikipedia_images", function (data) {
 //            console.log(data);
         });
+        mysocket.addListener("spinn3r", function (data) {
+//            console.log(data);
+        });
+        mysocket.addListener("tweets", function (data) {
+//            console.log(data);
+        });
+        mysocket.addListener("trends", function (data) {
+//            console.log(data);
+        });
 
         $scope.filter = {
             filter: false
