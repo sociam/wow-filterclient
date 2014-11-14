@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css"> 
+        <link rel="stylesheet" href="bower_components/angularjs/angular-csp.css">
+        <link rel="stylesheet" href="bower_components/pure/pure-min.css">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="bower_componenets/pure/grids-responsive-old-ie-min.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="bower_components/pure/grids-responsive-min.css">
+        <!--<![endif]-->
+    </head>
+    <body ng-app="filterclient" ng-controller="main">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <img src="img/SOCIAM-Col-logo.png" class="pure-img" />
+
+        <h1>SOCIAM Window On The Web (WoW)</h1>
+
+        <!--
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-2-3"> ... </div>
+            <div class="pure-u-1 pure-u-md-1-3"> ... </div>
+        </div>
+        -->
+
+        <p>Window on the Web is an installation showing the current state of the web.</p>
+
+        <h2>Filters</h2>
+
+        <p>You can enable filters on the displays, below.</p>
+
+        <button ng-hide="filter.filter" ng-click="filter.filter=true" class="pure-button">Filters are OFF</button>
+        <button ng-show="filter.filter" ng-click="filter.filter=false" class="pure-button pure-button-active">Filters are ON</button>
+
+        <p>You can filter by a keyword.</p>
+
+        <form class="pure-form pure-form-aligned">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="q">Keyword</label>
+                    <input id="q" type="text" placeholder="keyword" ng-model="filter.q">
+                </div>
+            </fieldset>
+        </form>
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/underscore/underscore-min.js"></script>
+        <script src="bower_components/angularjs/angular.min.js"></script>
+        <script src="bower_components/socket.io-client/socket.io.js"></script>
+        <script src="bower_components/angular-socket-io/socket.min.js"></script>
+        <script src="js/wow-filterclient.js"></script>
+    </body>
+</html>
